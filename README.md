@@ -1,4 +1,4 @@
-# equationSolver
+
 # 🧮 Algebraic Equation Solver (Spring Boot + PostgreSQL)
 
 This project is a Spring Boot RESTful web service that allows users to:
