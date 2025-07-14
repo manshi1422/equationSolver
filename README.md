@@ -43,3 +43,29 @@ This project is a Spring Boot RESTful web service that allows users to:
 {
   "equation": "3 * x + 2 * y - z"
 }
+```
+**Response Body:**
+```json
+{
+  "equationId": 3
+}
+```
+### 🔹 2. Get All Equations
+
+**GET** `/api/equations`
+
+
+### 🔹 3. Evaluate equation
+
+**POST** `/api/equations/{equationId}/evaluate`
+
+**Request Body:**
+```json
+{
+  "variables": {
+    "x": 2,
+    "y": 2,
+    "z":1
+  }
+}
+```
