@@ -34,11 +34,10 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 
-@SpringBootTest
 @ExtendWith(MockitoExtension.class)
 public class AlgebraicEquationsSolverApplicationTests {
 
-	@MockitoBean
+	@Mock
 	private EquationRepository equationRepository;
 
 	@InjectMocks
@@ -51,7 +50,6 @@ public class AlgebraicEquationsSolverApplicationTests {
 	void testStoreEquation() throws Exception {
 		String infix = "3 * x + 2 * y - z";
 		ArgumentCaptor<EquationEntity> captor = ArgumentCaptor.forClass(EquationEntity.class);
-
 		when(equationRepository.save(any())).thenAnswer(invocation -> {
 			EquationEntity entity = invocation.getArgument(0);
 			entity.setId(1L);  // manually set ID since @GeneratedValue doesn't run in unit tests

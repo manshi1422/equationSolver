@@ -53,7 +53,7 @@ public class EquationService {
         return evaluateTree(tree, vars);
     }
 
-    private double evaluateTree(Node node, Map<String, Double> vars) {
+    public double evaluateTree(Node node, Map<String, Double> vars) {
         if (node == null) return 0;
         String val = node.value;
 
